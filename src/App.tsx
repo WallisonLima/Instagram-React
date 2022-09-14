@@ -1,10 +1,11 @@
-import React from 'react';
-import { Login } from './components/Login';
+
+// import { Login } from './pages/Login';
+import { Router } from './routes';
 
 
 function App() {
   return (
-    <Login />
+    <Router />
   );
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './styles.css'
 
 import instagramPhone from '../../assets/instagram-phone.png'
@@ -18,7 +18,7 @@ export function Login() {
                     <div className="profile-photo">
                         <img src={instagramPerfil} alt="foto do perfil" />
                     </div>
-                    <a href="#" className="instagram-login">Continue como walllima</a>
+                    <a href="/pagina-inicial" className="instagram-login">Continue como walllima</a>
                     <a href="#" className="instagram-logout">Remover conta</a>
                 </div>
                 <div className="group">
