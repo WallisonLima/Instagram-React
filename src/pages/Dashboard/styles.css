@@ -14,12 +14,12 @@ body {
 .container {
     display: flex;
     justify-content: space-between;
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    min-height:100%;
-    height:auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
 }
 
 .container-left {
@@ -29,11 +29,21 @@ body {
     flex-grow: 1;
 }
 
-.container-left img{
+.container-left img {
     height: 1.8rem;
     margin-top: 27px;
     margin-bottom: 20px;
     margin-left: 24px;
+}
+
+.container-icons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    /* margin-left: 5px; */
+    align-items: flex-start;
+    width: 85%;
+    background-color: #FFFFFFFF;
 }
 
 .container-center {
@@ -46,5 +56,3 @@ body {
     height: 200px;
     flex-grow: 1;
 }
-
-
