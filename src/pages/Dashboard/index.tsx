@@ -1,8 +1,15 @@
 import './styles.css'
 
 import instagramLogo from '../../assets/instagram-logo.png'
-import { Icones } from '../../shared/components/Icones'
+import instagramPerfil from '../../assets/instagram-perfil.jpg'
 
+import { Icones } from '../../shared/components/Icones'
+import { StatusCarrocel } from '../../shared/components/StatusCarrocel'
+import ReactElasticCarousel from 'react-elastic-carousel'
+
+
+let icones = ['Home', 'Explore', 'Messages', 'Notifications', 'Create', 'Profile']
+let statusCarrossel = [instagramLogo, instagramPerfil]
 
 
 export const Dashboard = () => {
@@ -11,15 +18,19 @@ export const Dashboard = () => {
             <div className='container-left'>
                 <img src={instagramLogo} alt="Logo do instagram" />
                 <div className='container-icons'>
-                    <Icones icone="Home" />
-                    <Icones icone="Explore" />
-                    <Icones icone="Messages" />
-                    <Icones icone="Notifications" />
-                    <Icones icone="Create" />
-                    <Icones icone="Profile" />
+                    {icones.map((icone) => <Icones key={icone} icone={icone} />)}
                 </div>
             </div>
-            <div className='container-center'>centro</div>
+
+            <div className='container-center'>
+                <ReactElasticCarousel>
+                    <div className='container-carrocel'>
+                        {statusCarrossel.map((s, index) => <StatusCarrocel key={index} foto={s} />)}
+                    </div>
+                </ReactElasticCarousel>
+            </div>
+
+
             <div className='container-rigth'>lado direito</div>
         </div>
     )
